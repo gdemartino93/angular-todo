@@ -5,7 +5,7 @@
       <h5 class="card-title">{{ task.description }}</h5>
       <p class="card-text">{{ task.createdAt | date:"short" }}</p>
       <span>{{ task.isDone ? "Fatto" : "Da fare" }}</span>
-      <button (click)="delete(task.id)">ddd</button>
+      <button (click)="deleteTask(task.id)">X</button>
     </div>
   </div>
 </div>

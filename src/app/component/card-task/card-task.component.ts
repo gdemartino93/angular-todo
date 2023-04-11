@@ -17,6 +17,9 @@ export class CardTaskComponent implements OnInit {
     let index = this.tasks.findIndex(task => task.id === id)
     this.tasks.splice(index,1)
   }
+  deleteTask(id : number){
+    this.taskService.deleteTask(id)
+  }
   ngOnInit(): void {
 
   }
