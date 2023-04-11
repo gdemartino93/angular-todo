@@ -17,4 +17,7 @@ export class TaskService {
   addTask(task: ITasks): void {
     this.tasks.push(task); // Add a new task to the array
   }
+  deleteTask(id : number): void{
+    console.log(id)
+  }
 }

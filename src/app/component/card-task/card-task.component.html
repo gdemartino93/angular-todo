@@ -1,0 +1,11 @@
+<div class="my-5 d-flex justify-content-around flex-wrap">
+  <div class="card col-12 col-md-8 col-lg-6 text-bg-success mb-3" style="max-width: 18rem;" *ngFor="let task of tasks" >
+    <div class="card-header">{{ task.id }}</div>
+    <div class="card-body">
+      <h5 class="card-title">{{ task.description }}</h5>
+      <p class="card-text">{{ task.createdAt | date:"short" }}</p>
+      <span>{{ task.isDone ? "Fatto" : "Da fare" }}</span>
+      <button (click)="delete(task.id)">ddd</button>
+    </div>
+  </div>
+</div>

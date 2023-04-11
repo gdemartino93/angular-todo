@@ -10,20 +10,20 @@ import { FormsModule } from '@angular/forms';
 })
 export class TodoListComponent implements OnInit {
 
-  tasks: ITasks[] = [];
+  tasks: ITasks[] = this.taskService.tasks;
   @Input()
   description : string = "";
-
-  constructor() { }
+  k : number = 1;
+  constructor(private taskService : TaskService) { }
 
   createNew(){
     const task: ITasks = {
-      id: this.tasks.length + 1,
+      id: this.k++,
       description: this.description,
       isDone: false,
       createdAt: new Date()
     };
-    this.tasks.push(task);
+    this.taskService.addTask(task)
     this.description = "";
     console.log(this.tasks);
   }
