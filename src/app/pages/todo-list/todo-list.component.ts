@@ -11,16 +11,17 @@ export class TodoListComponent implements OnInit {
 
   tasks: ITasks[] = [];
 @Input()
-name : string = "";
+description : string = "";
 
 createNew(){
     this.task = {
       id : 1,
-      description : this.name,
+      description : this.description,
       isDone : false,
       createdAt : new Date()
     }
     this.tasks.push(this.task)
+    this.description = "";
     console.log(this.tasks)
 }
 task : ITasks = {
