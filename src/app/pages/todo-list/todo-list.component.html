@@ -1,6 +1,6 @@
 <section class="container d-flex justify-content-center">
 <div class="col-12 col-md-8 col-lg-6 debug">
-  <input type="text" [(ngModel)]="description" (keydown.enter)="createNew()">
-  <button (click)="createNew()">aggiungi</button>
+  <input class="form-control form-control-lg" type="text" placeholder="Inserisci il task e premi invio..." aria-label=".form-control-lg example" [(ngModel)]="description" (keydown.enter)="createNew()">
 </div>
 </section>
+
